@@ -41,7 +41,7 @@ The company creates a new product entry by submitting details through the front-
 
 ```bash
 # Example of running a transition function to create a product
-leo run create_product aleo1zeklp6dd8e764spe74xez6f8w27dlua3w7hl4z2uln03re52egpsv46ngg "Product A" 100u64
+leo run create_product 100u64
 ```
 
 3. Transfer of Ownership:
@@ -49,7 +49,7 @@ When the product is transferred to another party in the supply chain, the curren
 
 ```bash
 # Example of running a transition function to transfer ownership
-leo run transfer_ownership aleo1t0uer3jgtsgmx5tq6x6f9ecu8tr57rzzfnc2dgmcqldceal0ls9qf6st7a "Product A"
+leo run transfer_ownership Hash_of_Product aleo1t0uer3jgtsgmx5tq6x6f9ecu8tr57rzzfnc2dgmcqldceal0ls9qf6st7a
 ```
 
 4. Verification Request:
@@ -57,7 +57,7 @@ A buyer or regulator requests verification of a product by querying the blockcha
 
 ```bash
 # Example of querying the blockchain for product verification
-leo run verify_product "Product A"
+leo run verify_product Hash_of_Product
 ```
 
 5. View Supply Chain Status:
@@ -65,5 +65,5 @@ Users can view the current status of their supply chain, including all transacti
 
 ```bash
 # Example of querying the blockchain for supply chain status
-leo run view_supply_chain aleo1zeklp6dd8e764spe74xez6f8w27dlua3w7hl4z2uln03re52egpsv46ngg
+leo run view_product_status Hash_of_Product
 ```
